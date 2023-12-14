@@ -4,18 +4,45 @@ body {
 
   display: grid;
   grid-template-columns: 1fr 3fr;
+  font-family: roboto-reg;
   
+}
+
+@font-face {
+  font-family: roboto-reg;
+  src: url(Roboto-Regular.ttf);
+}
+
+@font-face {
+  font-family: roboto-bold;
+  src: url(Roboto-Bold.ttf);
 }
 
 .sidebar {
   background-color: rgb(122, 122, 188);
 
+  color: white;
   display: grid;
   grid-row: 1/3;
+  grid-auto-rows: max-content;
+  row-gap: 50px;
+  font-size: 1.3rem;
+  font-family: roboto-bold;
+}
+
+.dashboard {
+  padding-top: 20px;
 }
 
 .sidebar img {
   height: 30px;
+}
+
+.side-content-group1,
+.side-content-group2 {
+  display: grid;
+  grid-auto-rows: max-content;
+  row-gap: 10px;
 }
 
 .header {
@@ -154,9 +181,6 @@ button {
 }
 
 
-.sidebar div {
-  padding: 15px;
-}
 
 .dashboard,
 .side-content-group1 div,
@@ -164,7 +188,7 @@ button {
   display: flex;
   align-items: center;
   gap: 15px;
-  padding: 15px;
+  padding-left: 20px;
 }
 
 .home {
@@ -176,10 +200,24 @@ p {
   margin: 0;
 }
 
+svg {
+  height: 30px;
+}
 
-/* .second-row-group1 {
-  display: grid;
-  grid-template-columns: 1fr 2.5fr;
-  padding: 15px;
-  align-items: center;
-} */
+.dashboard svg {
+  height: 55px;
+ 
+}
+
+.sidebar svg {
+  fill: white;
+}
+
+.sidebar span {
+  padding-top: 7.5px;
+  /* font-weight: bold; */
+}
+
+.ekstra {
+  display: flex;
+}
