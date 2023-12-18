@@ -19,7 +19,7 @@ body {
 }
 
 .sidebar {
-  background-color: rgb(122, 122, 188);
+  background-color: #1992D4;
 
   color: white;
   display: grid;
@@ -46,32 +46,42 @@ body {
 }
 
 .header {
-  background-color: rgb(197, 181, 151);
+  background-color: white;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1;
 }
 
 .first-row {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr max-content;
   gap: 30px;
 }
 
 .first-row-group1 {
   display: grid;
-  grid-template-columns: 35px 2fr;
+  grid-template-columns: 35px minmax(230px, 600px);
   padding: 15px;
   align-items: center;
+  padding-left: 25px;
 }
 
 .first-row-group2 {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: max-content max-content max-content;
   padding: 15px;
+  padding-right: 50px;
   align-items: center;
+  gap: 15px;
+  font-family: roboto-bold;
+}
+
+.first-row-group2 > svg {
+  margin-right: 20px;
 }
 
 .second-row {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr max-content;
   gap: 50px;
 }
 
@@ -79,30 +89,56 @@ body {
   display: flex;
   padding: 15px;
   align-items: center;
+
+  gap: 12px;
 }
+
+.second-row-group2 {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 15px;
+  padding: 15px 35px 15px 0px;
+  align-items: center;
+}
+
+
+.second-row-group1 .picture {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background-color: #FACC15;
+  background-image: url(kitty.png);
+  background-size: 30px;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-left: 20px;
+
+  }
 
 .second-row-group1 img {
   height: 50px;
   flex: 1;
 }
 
-.second-row-group2 {
-  display: grid;
-  grid-template-columns: repeat(3, auto);
-  gap: 15px;
-  padding: 15px;
-  align-items: center;
-}
 
 button {
   box-sizing: border-box;
   height: 40px;
+  border-radius: 34px;
+  border-style: none;
+  background-color: #1992D4;
+  color: white;
+  font-family: roboto-bold;
 }
 
 
 .mini-group {
   margin-top: 5px;
   flex: 2;
+
+  display: grid;
+  margin-left: 10px;
+  font-family: roboto-bold;
 }
 
 .mini-group p:first-child {
@@ -115,7 +151,7 @@ button {
 }
 
 .main-content {
-  background-color: rgb(255, 255, 255);
+  background-color: #E2E8F0;
 
 }
 .main-content-group1 {
@@ -137,6 +173,7 @@ button {
 .projects {
   border: 2px solid black;
   padding: 20px;
+  background-color: white;
 }
 
 .extra-buttons {
@@ -180,8 +217,6 @@ button {
 
 }
 
-
-
 .dashboard,
 .side-content-group1 div,
 .side-content-group2 div {
@@ -220,4 +255,27 @@ svg {
 
 .ekstra {
   display: flex;
+}
+
+input[type="search"] {
+  font-size: 1rem;
+  border: none;
+  background-color: #E2E8F0;
+  height: 30px;
+  border-radius: 15px;
+  padding: 5px 20px 5px;
+  margin-left: 10px;
+}
+
+.picture {
+  width: 3.8rem;
+  height: 3.8rem;
+  border-radius: 50%;
+  background-color: #FACC15;
+  background-image: url(kitty.png);
+  background-size: 30px;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-right: 5px;
+
 }
